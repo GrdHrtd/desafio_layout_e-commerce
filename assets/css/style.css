@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* 3 filas y 2 columnas */
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 
+        "navbar navbar"
+        "asidebar catalogo"
+        "footer footer";
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: rgb(249, 237, 177);
+    display: flex;
+    justify-content: center;
+    font-size:24px;
+    font-weight: 800;
+    color: rgb(125, 26, 46);
+}
+
+.title{
+    align-self: center;
+}
+
+.logo{
+    height: 100%;
+}
+
+.asidebar{
+    grid-area: asidebar;
+    background-color: rgb(106, 190, 200);
+    display: flex;
+    flex-direction: column;
+    color: rgb(125, 26, 46);
+}
+
+h3{
+    margin-left: 8px;
+}
+
+.categorias{
+    display: flex;
+    margin-left: 8px;
+}
+
+.text{
+    font-weight: 800;
+}
+
+.stock{
+    color: rgb(226, 26, 46);
+}
+
+.catalogo{
+    grid-area: catalogo;
+    background-color:rgb(78, 158, 169);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    /*repeat (3, 1fr) con la funcion repeat logramos repetir (exactamente igual) en este caso 3 veces el valor 1fr*/
+    /*grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); Con esto logramos volver responsive las tarjetas - minmax es min350px y max1fr volver responsive*/
+    /*overflow-y: scroll;  */ 
+}
+
+.card{
+    height: 270px;
+    width: 200px;
+    background-color: rgb(249, 237, 177);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(125, 26, 46);
+}
+
+.item{
+    height: 70%;
+}
+
+h4, p {
+    margin: 3px;
+    padding: 0;
+}
+
+button{
+    width: 100%;
+    height: 12%;
+    background-color: rgb(175, 190, 121);
+    border: none;
+    color: rgb(125, 26, 46);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(249, 237, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(125, 26, 46);
+    font-size: 18px;
+    font-weight: 800;
+}
